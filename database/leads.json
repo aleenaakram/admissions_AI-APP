@@ -1,0 +1,232 @@
+[
+  {
+    "id": "sess-6mmjj062y",
+    "name": "Aleena Akram",
+    "phone": "+923062363594",
+    "email": "N/A",
+    "interest": "Web Development",
+    "roadmap": {
+      "modules": [
+        {
+          "title": "Module 1: Core Fundamentals of Web Development",
+          "topics": [
+            "Introduction",
+            "Tools Setup",
+            "Basic Concepts"
+          ]
+        },
+        {
+          "title": "Module 2: Intermediate Techniques",
+          "topics": [
+            "Workflow Best Practices",
+            "Real-world Exercises",
+            "Asset Management"
+          ]
+        },
+        {
+          "title": "Module 3: Advanced Integrations",
+          "topics": [
+            "Speed optimization",
+            "Dynamic Assets",
+            "API connections"
+          ]
+        },
+        {
+          "title": "Module 4: Professional Capstone",
+          "topics": [
+            "Portfolio building",
+            "Client pitching",
+            "Delivery pipelines"
+          ]
+        }
+      ],
+      "finalProject": "Complete a professional portfolio-grade capstone project in Web Development."
+    },
+    "summary": "Aleena Akram is interested in Web Development. Captured phone: 03062363594. Generated personalized course outline.",
+    "timestamp": "2026-06-21T05:02:53.381Z"
+  },
+  {
+    "id": "sess-m26s3u0w7",
+    "name": "aleena akram",
+    "phone": "+923021962317",
+    "email": "N/A",
+    "interest": "Web Development",
+    "roadmap": {
+      "modules": [
+        {
+          "title": "Module 1: Core Fundamentals of Web Development",
+          "topics": [
+            "Introduction",
+            "Tools Setup",
+            "Basic Concepts"
+          ]
+        },
+        {
+          "title": "Module 2: Intermediate Techniques",
+          "topics": [
+            "Workflow Best Practices",
+            "Real-world Exercises",
+            "Asset Management"
+          ]
+        },
+        {
+          "title": "Module 3: Advanced Integrations",
+          "topics": [
+            "Speed optimization",
+            "Dynamic Assets",
+            "API connections"
+          ]
+        },
+        {
+          "title": "Module 4: Professional Capstone",
+          "topics": [
+            "Portfolio building",
+            "Client pitching",
+            "Delivery pipelines"
+          ]
+        }
+      ],
+      "finalProject": "Complete a professional portfolio-grade capstone project in Web Development."
+    },
+    "summary": "aleena akram is interested in Web Development. Captured phone: 03021962317. Generated personalized course outline.",
+    "timestamp": "2026-06-21T04:55:29.416Z"
+  },
+  {
+    "id": "sess-o3llg7f6n",
+    "name": "ALEENA akram",
+    "phone": "+923062363594",
+    "email": "N/A",
+    "interest": "AI & Automation",
+    "roadmap": {
+      "modules": [
+        {
+          "title": "Module 1: AI Fundamentals & Prompting",
+          "topics": [
+            "Generative AI Basics",
+            "Prompt Engineering in ChatGPT & Claude",
+            "AI Productivity Hacks"
+          ]
+        },
+        {
+          "title": "Module 2: No-Code Automation with n8n",
+          "topics": [
+            "n8n Setup & Trigger Nodes",
+            "Managing JSON Payloads",
+            "Webhook Integrations"
+          ]
+        },
+        {
+          "title": "Module 3: CRM & Database Integrations",
+          "topics": [
+            "Google Sheets API",
+            "Notion CRM Hubs",
+            "Lead Router Automation"
+          ]
+        },
+        {
+          "title": "Module 4: Advanced AI Assistants & Voice Agents",
+          "topics": [
+            "Build custom GPTs",
+            "Integrating Voiceflow & Twilio Voice",
+            "WhatsApp Cloud API Integration"
+          ]
+        }
+      ],
+      "finalProject": "Build an AI admissions receptionist answering phone and chat, synced with a live HubSpot CRM."
+    },
+    "summary": "ALEENA akram is interested in AI & Automation. Captured phone: 03062363594. Generated personalized course outline.",
+    "timestamp": "2026-06-21T04:22:40.142Z"
+  },
+  {
+    "id": "sess-ifllqs47d",
+    "name": "aleena",
+    "phone": "03062363594",
+    "email": "N/A",
+    "interest": "AI & Automation",
+    "roadmap": {
+      "modules": [
+        {
+          "title": "Module 1: AI Fundamentals & Prompting",
+          "topics": [
+            "Generative AI Basics",
+            "Prompt Engineering in ChatGPT & Claude",
+            "AI Productivity Hacks"
+          ]
+        },
+        {
+          "title": "Module 2: No-Code Automation with n8n",
+          "topics": [
+            "n8n Setup & Trigger Nodes",
+            "Managing JSON Payloads",
+            "Webhook Integrations"
+          ]
+        },
+        {
+          "title": "Module 3: CRM & Database Integrations",
+          "topics": [
+            "Google Sheets API",
+            "Notion CRM Hubs",
+            "Lead Router Automation"
+          ]
+        },
+        {
+          "title": "Module 4: Advanced AI Assistants & Voice Agents",
+          "topics": [
+            "Build custom GPTs",
+            "Integrating Voiceflow & Twilio Voice",
+            "WhatsApp Cloud API Integration"
+          ]
+        }
+      ],
+      "finalProject": "Build an AI admissions receptionist answering phone and chat, synced with a live HubSpot CRM."
+    },
+    "summary": "aleena is interested in AI & Automation. Captured phone: 03062363594. Generated personalized course outline.",
+    "timestamp": "2026-06-20T14:21:16.168Z"
+  },
+  {
+    "id": "test-session-1",
+    "name": "dmission chahye",
+    "phone": "03001234567",
+    "email": "N/A",
+    "interest": "AI & Automation",
+    "roadmap": {
+      "modules": [
+        {
+          "title": "Module 1: AI Fundamentals & Prompting",
+          "topics": [
+            "Generative AI Basics",
+            "Prompt Engineering in ChatGPT & Claude",
+            "AI Productivity Hacks"
+          ]
+        },
+        {
+          "title": "Module 2: No-Code Automation with n8n",
+          "topics": [
+            "n8n Setup & Trigger Nodes",
+            "Managing JSON Payloads",
+            "Webhook Integrations"
+          ]
+        },
+        {
+          "title": "Module 3: CRM & Database Integrations",
+          "topics": [
+            "Google Sheets API",
+            "Notion CRM Hubs",
+            "Lead Router Automation"
+          ]
+        },
+        {
+          "title": "Module 4: Advanced AI Assistants & Voice Agents",
+          "topics": [
+            "Build custom GPTs",
+            "Integrating Voiceflow & Twilio Voice",
+            "WhatsApp Cloud API Integration"
+          ]
+        }
+      ],
+      "finalProject": "Build an AI admissions receptionist answering phone and chat, synced with a live HubSpot CRM."
+    },
+    "summary": "dmission chahye is interested in AI & Automation. Captured phone: 03001234567. Generated personalized course outline.",
+    "timestamp": "2026-06-20T14:08:18.099Z"
+  }
+]

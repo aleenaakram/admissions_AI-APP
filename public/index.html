@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions AI - Student Admissions Assistant & CRM</title>
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"/><path d="M7 3.34V5a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3V3.34"/><path d="M19 15V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4"/><path d="M12 21a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2"/></svg>
+        </div>
+        <div class="brand-text">
+          <h1>Admissions AI</h1>
+          <span>Automation Hub v1.0</span>
+        </div>
+      </div>
+      
+      <nav class="nav-links">
+        <button class="nav-item active" data-tab="chat">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          Admissions Chatbot
+        </button>
+        <button class="nav-item" data-tab="crm">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          CRM Dashboard
+        </button>
+        <button class="nav-item" data-tab="workflow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          Workflow & Logs
+        </button>
+        <button class="nav-item" data-tab="settings">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          API Settings
+        </button>
+      </nav>
+      
+      <!-- Quick Status -->
+      <div class="sidebar-status">
+        <div class="status-indicator online"></div>
+        <div class="status-text">
+          <span>System Online</span>
+          <small>Active SSE Broker</small>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Tab 1: Chatbot Interface -->
+      <section id="tab-chat" class="tab-panel active">
+        <div class="chat-layout">
+          <!-- Chat box -->
+          <div class="chat-card glass">
+            <div class="chat-header">
+              <div class="chat-agent-info">
+                <div class="agent-avatar">🤖</div>
+                <div>
+                  <h3>Admissions Assistant</h3>
+                  <span class="active-badge">AI Online • Speaks English & Roman Urdu</span>
+                </div>
+              </div>
+              <button class="btn btn-icon reset-chat-btn" title="Reset Conversation">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              </button>
+            </div>
+            
+            <div class="chat-messages-container" id="chat-messages">
+              <!-- Dynamically populated -->
+            </div>
+            
+            <div class="chat-input-area">
+              <input type="text" id="chat-input" placeholder="Type here in English or Roman Urdu... (e.g. 'mujhe AI seekhna hai')" autocomplete="off">
+              <button id="chat-send" class="btn btn-primary">
+                <span>Send</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Lead Capture Progress (Right Sidebar) -->
+          <div class="progress-card glass">
+            <div class="progress-header">
+              <h3>Live Data Capture</h3>
+              <p>Real-time AI Entity Extraction</p>
+            </div>
+            
+            <div class="progress-meter">
+              <div class="meter-bar"><div class="meter-fill" id="progress-bar" style="width: 0%"></div></div>
+              <span id="progress-percent">0% Qualified</span>
+            </div>
+            
+            <div class="fields-list">
+              <div class="field-item required" id="field-fullName">
+                <div class="field-status-circle"></div>
+                <div class="field-details">
+                  <span class="field-label">Full Name</span>
+                  <span class="field-val" id="val-fullName">Not Captured</span>
+                </div>
+              </div>
+              <div class="field-item required" id="field-phoneNumber">
+                <div class="field-status-circle"></div>
+                <div class="field-details">
+                  <span class="field-label">Phone Number</span>
+                  <span class="field-val" id="val-phoneNumber">Not Captured</span>
+                </div>
+              </div>
+              <div class="field-item required" id="field-interest">
+                <div class="field-status-circle"></div>
+                <div class="field-details">
+                  <span class="field-label">Course Interest</span>
+                  <span class="field-val" id="val-interest">Not Captured</span>
+                </div>
+              </div>
+              <div class="field-item optional" id="field-email">
+                <div class="field-status-circle"></div>
+                <div class="field-details">
+                  <span class="field-label">Email (Optional)</span>
+                  <span class="field-val" id="val-email">Not Captured</span>
+                </div>
+              </div>
+              <div class="field-item optional" id="field-city">
+                <div class="field-status-circle"></div>
+                <div class="field-details">
+                  <span class="field-label">City (Optional)</span>
+                  <span class="field-val" id="val-city">Not Captured</span>
+                </div>
+              </div>
+              <div class="field-item optional" id="field-experienceLevel">
+                <div class="field-status-circle"></div>
+                <div class="field-details">
+                  <span class="field-label">Experience (Optional)</span>
+                  <span class="field-val" id="val-experienceLevel">Not Captured</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="qualification-status card-alert inactive" id="qualification-alert">
+              <div class="alert-icon">✓</div>
+              <div class="alert-content">
+                <strong>Lead Qualified!</strong>
+                <p>Roadmap generated, data pushed to CRM, & WhatsApp dispatched.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tab 2: CRM Dashboard -->
+      <section id="tab-crm" class="tab-panel">
+        <div class="dashboard-header">
+          <div>
+            <h2>CRM Lead Dashboard</h2>
+            <p>Manage and review qualified student submissions</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-secondary" id="clear-crm-btn">Clear Database</button>
+            <button class="btn btn-primary" id="refresh-crm-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              Refresh
+            </button>
+          </div>
+        </div>
+
+        <!-- Metric Highlights -->
+        <div class="metrics-grid">
+          <div class="metric-card glass">
+            <span class="metric-title">Total CRM Leads</span>
+            <h2 id="crm-stat-total">0</h2>
+            <p class="metric-trend text-success">✓ 100% Qualified Inflow</p>
+          </div>
+          <div class="metric-card glass">
+            <span class="metric-title">Top Course Interest</span>
+            <h2 id="crm-stat-popular">N/A</h2>
+            <p class="metric-trend">Highest student demand</p>
+          </div>
+          <div class="metric-card glass">
+            <span class="metric-title">Last Activity</span>
+            <h2 id="crm-stat-time">-- : --</h2>
+            <p class="metric-trend" id="crm-stat-date">No recent submissions</p>
+          </div>
+        </div>
+
+        <!-- CRM Lead Grid table -->
+        <div class="crm-table-container glass">
+          <div class="crm-table-header">
+            <div class="search-box">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="crm-search" placeholder="Search by name, phone or email...">
+            </div>
+            <div class="filter-box">
+              <select id="crm-filter-interest">
+                <option value="">All Interests</option>
+                <option value="AI & Automation">AI & Automation</option>
+                <option value="Social Media Marketing">Social Media Marketing</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Video Editing">Video Editing</option>
+                <option value="Web Development">Web Development</option>
+                <option value="App Development">App Development</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <table class="crm-table">
+            <thead>
+              <tr>
+                <th>Timestamp</th>
+                <th>Name</th>
+                <th>Contact Info</th>
+                <th>Field of Interest</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="crm-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+          <div class="crm-empty-state" id="crm-empty-state">
+            <div class="empty-icon">📁</div>
+            <h3>No Leads Captured Yet</h3>
+            <p>Go to the chatbot tab and simulate a conversation to qualify a student.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tab 3: Workflow & Logs -->
+      <section id="tab-workflow" class="tab-panel">
+        <div class="dashboard-header">
+          <div>
+            <h2>Workflow Pipeline & Logs</h2>
+            <p>Live visualization of backend micro-services, APIs, and data routing</p>
+          </div>
+        </div>
+
+        <div class="workflow-grid">
+          <!-- Flowchart Visualizer -->
+          <div class="workflow-card glass">
+            <h3>Active Node Pipeline</h3>
+            
+            <div class="pipeline-container">
+              <!-- Interactive SVG Flowchart -->
+              <svg class="pipeline-svg" viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg">
+                <!-- Definitions for gradients and drop shadows -->
+                <defs>
+                  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="6" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                  <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3b82f6" />
+                    <stop offset="100%" stop-color="#1d4ed8" />
+                  </linearGradient>
+                  <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8b5cf6" />
+                    <stop offset="100%" stop-color="#6d28d9" />
+                  </linearGradient>
+                  <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#10b981" />
+                    <stop offset="100%" stop-color="#047857" />
+                  </linearGradient>
+                </defs>
+
+                <!-- Arrows / Pipelines -->
+                <g class="pipeline-links">
+                  <!-- Node 1 -> Node 2 -->
+                  <path id="link-chat-parser" d="M 120,70 L 260,70" stroke="#334155" stroke-width="3" fill="none" />
+                  <!-- Node 2 -> Node 3 -->
+                  <path id="link-parser-llm" d="M 330,110 L 330,170" stroke="#334155" stroke-width="3" fill="none" />
+                  <!-- Node 3 -> Node 4 -->
+                  <path id="link-llm-db" d="M 260,210 L 120,210" stroke="#334155" stroke-width="3" fill="none" />
+                  <!-- Node 4 -> Node 5 -->
+                  <path id="link-db-wa" d="M 120,250 L 260,350" stroke="#334155" stroke-width="3" fill="none" />
+                  <!-- Node 3 -> Node 5 (Direct alert trigger) -->
+                  <path id="link-llm-wa" d="M 330,250 L 330,310" stroke="#334155" stroke-width="3" fill="none" />
+                </g>
+
+                <!-- Pipeline Nodes -->
+                <!-- Node 1: Chat Client -->
+                <g class="node" id="node-chat">
+                  <rect x="20" y="40" width="100" height="60" rx="8" fill="url(#blueGrad)" />
+                  <text x="70" y="70" fill="white" font-size="12" font-weight="bold" text-anchor="middle">Student Chat</text>
+                  <text x="70" y="85" fill="#93c5fd" font-size="10" text-anchor="middle">Client UI</text>
+                </g>
+
+                <!-- Node 2: Webhook Parser -->
+                <g class="node" id="node-parser">
+                  <rect x="260" y="40" width="140" height="70" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2" />
+                  <text x="330" y="75" fill="white" font-size="12" font-weight="bold" text-anchor="middle">Express Server</text>
+                  <text x="330" y="93" fill="#94a3b8" font-size="10" text-anchor="middle">Session Router</text>
+                </g>
+
+                <!-- Node 3: LLM Engine -->
+                <g class="node" id="node-llm">
+                  <rect x="260" y="170" width="140" height="80" rx="8" fill="url(#purpleGrad)" />
+                  <text x="330" y="205" fill="white" font-size="12" font-weight="bold" text-anchor="middle">LLM Agent Engine</text>
+                  <text x="330" y="222" fill="#d8b4fe" font-size="10" text-anchor="middle">JSON Qualifier</text>
+                  <text x="330" y="235" fill="#f5f3ff" font-size="8" text-anchor="middle" id="node-llm-provider">Gemini / OpenAI</text>
+                </g>
+
+                <!-- Node 4: Leads DB -->
+                <g class="node" id="node-db">
+                  <rect x="20" y="180" width="100" height="80" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2" />
+                  <!-- Database cylinder look -->
+                  <path d="M 20,195 A 50,8 0 0,0 120,195" stroke="#475569" stroke-width="2" fill="none" />
+                  <path d="M 20,210 A 50,8 0 0,0 120,210" stroke="#475569" stroke-width="2" fill="none" />
+                  <text x="70" y="225" fill="white" font-size="12" font-weight="bold" text-anchor="middle">Local CRM</text>
+                  <text x="70" y="242" fill="#94a3b8" font-size="10" text-anchor="middle">leads.json</text>
+                </g>
+
+                <!-- Node 5: WhatsApp Gateway -->
+                <g class="node" id="node-wa">
+                  <rect x="260" y="310" width="140" height="70" rx="8" fill="url(#greenGrad)" />
+                  <text x="330" y="345" fill="white" font-size="12" font-weight="bold" text-anchor="middle">WhatsApp Dispatch</text>
+                  <text x="330" y="362" fill="#a7f3d0" font-size="10" text-anchor="middle">Twilio / Cloud API</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Smartphone Screen Simulator (Right Side) -->
+          <div class="phone-card glass">
+            <div class="phone-case">
+              <div class="phone-screen">
+                <div class="phone-header">
+                  <div class="speaker"></div>
+                  <div class="status-row">
+                    <span>9:41</span>
+                    <div class="icons">📶 🔋</div>
+                  </div>
+                  <div class="wa-chat-header">
+                    <button class="back-arrow">←</button>
+                    <div class="wa-avatar">FA</div>
+                    <div class="wa-info">
+                      <strong>Future Academy</strong>
+                      <span>Admissions Help</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="wa-chat-body" id="whatsapp-screen-messages">
+                  <div class="wa-system-time">TODAY</div>
+                  <div class="wa-message-in">
+                    Hi! I'm interested in applying for a course.
+                    <span class="msg-time">09:40</span>
+                  </div>
+                  <!-- Automated follow-up inserts here -->
+                  <div class="wa-empty-hint" id="wa-empty-hint">
+                    Awaiting Student Qualification... Once student meets requirements, the automated CRM follow-up message will trigger here.
+                  </div>
+                </div>
+                <div class="wa-chat-footer">
+                  <span class="wa-plus">+</span>
+                  <div class="wa-input-mock">Message</div>
+                  <span class="wa-mic">🎤</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Logs Panel -->
+        <div class="logs-card glass">
+          <div class="logs-header">
+            <h3>Real-Time System Log Terminal</h3>
+            <button class="btn btn-secondary btn-small" id="clear-logs-btn">Clear Logs</button>
+          </div>
+          <div class="logs-terminal" id="logs-terminal-body">
+            <div class="terminal-line system-line">[SYSTEM INITIATED] Broker connection established. Waiting for chat interactions...</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tab 4: Settings -->
+      <section id="tab-settings" class="tab-panel">
+        <div class="dashboard-header">
+          <div>
+            <h2>API & Services Configuration</h2>
+            <p>Configure model access, CRM properties, and WhatsApp gateway integrations</p>
+          </div>
+        </div>
+
+        <div class="settings-grid">
+          <!-- LLM Settings -->
+          <div class="settings-card glass">
+            <h3>AI Orchestrator Options</h3>
+            <p class="settings-desc">Choose which LLM powers the Admissions Chatbot agent.</p>
+            
+            <div class="form-group">
+              <label for="settings-provider">Active Provider</label>
+              <select id="settings-provider" class="form-control">
+                <option value="gemini">Google Gemini (Recommended)</option>
+                <option value="openai">OpenAI GPT Models</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="settings-gemini-group">
+              <label for="settings-gemini-key">Gemini API Key</label>
+              <input type="password" id="settings-gemini-key" class="form-control" placeholder="AIzaSy...">
+              <small class="help-text">Passed securely on API calls. If left blank, server falls back to local heuristic keyword parser.</small>
+            </div>
+
+            <div class="form-group hidden" id="settings-openai-group">
+              <label for="settings-openai-key">OpenAI API Key</label>
+              <input type="password" id="settings-openai-key" class="form-control" placeholder="sk-proj-...">
+              <small class="help-text">Required to use gpt-4o-mini.</small>
+            </div>
+          </div>
+
+          <!-- Twilio / WhatsApp settings -->
+          <div class="settings-card glass">
+            <h3>WhatsApp Gateway Integration</h3>
+            <p class="settings-desc">Hook up a Twilio or Meta WhatsApp Business sandbox to send real SMS/WhatsApp updates.</p>
+            
+            <div class="form-group">
+              <label for="settings-gateway">Gateway Provider</label>
+              <select id="settings-gateway" class="form-control">
+                <option value="none">Disabled (Local Visual Simulation Only)</option>
+                <option value="twilio">Twilio WhatsApp Sandbox</option>
+                <option value="whatsapp_cloud">WhatsApp Cloud API (Meta Developers)</option>
+              </select>
+            </div>
+
+            <!-- Twilio specific inputs -->
+            <div class="gateway-group hidden" id="gateway-twilio-fields">
+              <div class="form-group">
+                <label for="settings-twilio-sid">Twilio Account SID</label>
+                <input type="text" id="settings-twilio-sid" class="form-control" placeholder="AC...">
+              </div>
+              <div class="form-group">
+                <label for="settings-twilio-token">Twilio Auth Token</label>
+                <input type="password" id="settings-twilio-token" class="form-control" placeholder="Token">
+              </div>
+              <div class="form-group">
+                <label for="settings-twilio-from">Twilio Sandbox WhatsApp Number</label>
+                <input type="text" id="settings-twilio-from" class="form-control" placeholder="+14155238886">
+              </div>
+              <div class="form-group">
+                <label for="settings-twilio-to">Recipient WhatsApp Number (For Tests)</label>
+                <input type="text" id="settings-twilio-to" class="form-control" placeholder="+923000000000">
+              </div>
+            </div>
+
+            <!-- WhatsApp Cloud specific inputs -->
+            <div class="gateway-group hidden" id="gateway-cloud-fields">
+              <div class="form-group">
+                <label for="settings-cloud-token">Access Token (Permanent or Temporary)</label>
+                <input type="password" id="settings-cloud-token" class="form-control" placeholder="EAAB...">
+              </div>
+              <div class="form-group">
+                <label for="settings-cloud-phoneid">Phone Number ID</label>
+                <input type="text" id="settings-cloud-phoneid" class="form-control" placeholder="105432...">
+              </div>
+              <div class="form-group">
+                <label for="settings-cloud-to">Recipient WhatsApp Number (For Tests)</label>
+                <input type="text" id="settings-cloud-to" class="form-control" placeholder="+923000000000">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-actions">
+          <button class="btn btn-primary" id="save-settings-btn">Save Configurations</button>
+          <span class="settings-save-indicator" id="settings-save-success">✓ Settings Saved locally!</span>
+        </div>
+      </section>
+      
+    </main>
+  </div>
+
+  <!-- Detail Modal for CRM leads -->
+  <div class="modal" id="lead-modal">
+    <div class="modal-content glass">
+      <div class="modal-header">
+        <h2 id="modal-lead-name">Student Detail File</h2>
+        <button class="close-btn" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="modal-row">
+          <div class="modal-col col-4">
+            <h4 class="label-heading">Contact Details</h4>
+            <div class="data-block">
+              <p><strong>Phone:</strong> <span id="modal-lead-phone"></span></p>
+              <p><strong>Email:</strong> <span id="modal-lead-email"></span></p>
+              <p><strong>Interest:</strong> <span id="modal-lead-interest" class="badge"></span></p>
+              <p><strong>Captured:</strong> <span id="modal-lead-timestamp"></span></p>
+            </div>
+            
+            <h4 class="label-heading" style="margin-top: 20px;">AI Conversation Summary</h4>
+            <div class="data-block summary-text" id="modal-lead-summary">
+              No summary available.
+            </div>
+          </div>
+          
+          <div class="modal-col col-8">
+            <h4 class="label-heading">Generated Course Roadmap</h4>
+            <div class="roadmap-timeline" id="modal-lead-roadmap">
+              <!-- Dynamically populated modules -->
+            </div>
+            <div class="capstone-block" id="modal-lead-capstone">
+              <strong>Capstone Final Project:</strong>
+              <p id="modal-lead-capstone-text"></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared App JS files -->
+  <script src="js/app.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/crm.js"></script>
+  <script src="js/workflow.js"></script>
+</body>
+</html>
